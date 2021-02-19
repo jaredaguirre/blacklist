@@ -4,7 +4,7 @@ const ipRegex = require('ip-regex');
 clipboardy.read()
     .then((text) => {
         let ip_list = text.match(ipRegex());
-        if(ip_list.length == 0){
+        if(ip_list == null){
             console.log('Seems like there is not any IP on the clipboard!');
         }
         else{
